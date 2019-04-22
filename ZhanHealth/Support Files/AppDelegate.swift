@@ -29,8 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if scheme == "ZhanHealth"{
           let centerVC = EmergencyViewController()
           let centerNavVC = UINavigationController(rootViewController: centerVC)
-          centerNavVC.navigationBar.barTintColor = .white
-          centerNavVC.navigationBar.tintColor = .black
           rootController.center(centerNavVC)
           rootController.openCenter(animated: true)
         }
@@ -44,11 +42,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
     rootController.setCenter(isLoggedIn: conn.isLoggedIn())
+    rootController.configs.bounceOnCenterPanelOpen = false
     window?.rootViewController = rootController
   }
   
   func configureNavBar() {
     UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: Font.medium.rawValue, size: 15.widthProportion())!], for: .normal)
+    UINavigationBar.appearance().tintColor = .black
   }
 
   func applicationWillResignActive(_ application: UIApplication) {

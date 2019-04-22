@@ -25,7 +25,7 @@ class SignUpViewController: UIViewController {
   
   @objc func signUp() {
     let conn = Connection()
-    if validate() {
+    if mainView.validate() {
       let reg = conn.register(firstname: mainView.firstNameField.text!,
                                  lastname: mainView.lastNameField.text!,
                                  email: mainView.emailField.text!,
@@ -39,35 +39,6 @@ class SignUpViewController: UIViewController {
       }
     }
     }
-  
-  func validate() -> Bool {
-    if mainView.firstNameField.text == nil || mainView.firstNameField.text == "" {
-      mainView.firstNameField.errorMessage = "Enter Firstname"
-      return false
-    }
-    if mainView.lastNameField.text == nil || mainView.lastNameField.text == "" {
-      mainView.lastNameField.errorMessage = "Enter Lastname"
-      return false
-    }
-    if mainView.emailField.text == nil || mainView.emailField.text == "" {
-      mainView.emailField.errorMessage = "Enter Email"
-      return false
-    }
-    if mainView.passwordField.text == nil || mainView.passwordField.text == "" {
-      mainView.passwordField.errorMessage = "Enter Password"
-      return false
-    }
-    if mainView.confirmPasswordField.text == nil || mainView.confirmPasswordField.text == "" {
-      mainView.confirmPasswordField.errorMessage = "Confirm Password"
-      return false
-    }
-    if mainView.passwordField.text != mainView.confirmPasswordField.text {
-      mainView.passwordField.errorMessage = "Passwords don't match"
-      mainView.confirmPasswordField.errorMessage = "Passwords don't match"
-      return false
-    }
-    return true
-  }
 }
 
 

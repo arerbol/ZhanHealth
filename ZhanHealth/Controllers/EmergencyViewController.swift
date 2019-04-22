@@ -28,6 +28,7 @@ class EmergencyViewController: UIViewController {
   lazy var mainView: EmergencyView = {
     let mv = EmergencyView()
     mv.sosButton.addTarget(self, action: #selector(sosTapped), for: .touchUpInside)
+    mv.instructionsButton.addTarget(self, action: #selector(sosTapped), for: .touchUpInside)
     return mv
   }()
   
@@ -36,6 +37,11 @@ class EmergencyViewController: UIViewController {
     view = mainView
     navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(self.showMenuPanel)), UIBarButtonItem(title: "Emergency Call", style: .plain, target: self, action: nil)]
     loopSoundAndVibrate()
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(true)
+    timer?.invalidate()
   }
 
   
@@ -50,7 +56,13 @@ class EmergencyViewController: UIViewController {
   }
   
   @objc func sosTapped() {
-    timer?.invalidate()
+    let centerVC = ProfileViewController()
+    let centerNavVC = UINavigationController(rootViewController: centerVC)
+    centerNavVC.navigationBar.barTintColor = .white
+    centerNavVC.navigationBar.tintColor = .black
+    centerNavVC.navigationBar.isTranslucent = false
+    panel?.center(centerNavVC)
+    panel?.openCenter(animated: true)
   }
   
 }

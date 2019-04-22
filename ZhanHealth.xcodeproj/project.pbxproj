@@ -29,6 +29,19 @@
 		B590BA762265E8BB0005920C /* MedicalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B590BA752265E8BB0005920C /* MedicalCard.swift */; };
 		B590BA782265FC750005920C /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B590BA772265FC750005920C /* FormField.swift */; };
 		B590BA7A2265FC850005920C /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B590BA792265FC850005920C /* extensions.swift */; };
+		B5B26F30226D7BC300B5DA64 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F2F226D7BC300B5DA64 /* ProfileHeaderView.swift */; };
+		B5B26F32226D7CDD00B5DA64 /* ProfileHeaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F31226D7CDD00B5DA64 /* ProfileHeaderButton.swift */; };
+		B5B26F34226D7D2D00B5DA64 /* ProfileHeaderButtonsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F33226D7D2D00B5DA64 /* ProfileHeaderButtonsStack.swift */; };
+		B5B26F38226D8CAA00B5DA64 /* MedCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F37226D8CAA00B5DA64 /* MedCardViewController.swift */; };
+		B5B26F3A226D8D3B00B5DA64 /* MedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F39226D8D3B00B5DA64 /* MedCardView.swift */; };
+		B5B26F3C226DA6C600B5DA64 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F3B226DA6C600B5DA64 /* InstructionsViewController.swift */; };
+		B5B26F40226DBA0700B5DA64 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F3F226DBA0700B5DA64 /* ContactsViewController.swift */; };
+		B5B26F42226DBDB900B5DA64 /* ProfileMedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F41226DBDB900B5DA64 /* ProfileMedCardView.swift */; };
+		B5B26F44226DBE6300B5DA64 /* MedCardTitleSubtitleStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F43226DBE6300B5DA64 /* MedCardTitleSubtitleStack.swift */; };
+		B5B26F48226DC28400B5DA64 /* ProfileInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F47226DC28400B5DA64 /* ProfileInstructionsView.swift */; };
+		B5B26F4B226DC8E000B5DA64 /* ProfileInstructionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F4A226DC8E000B5DA64 /* ProfileInstructionTableViewCell.swift */; };
+		B5B26F4D226DD8EA00B5DA64 /* ProfileContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F4C226DD8EA00B5DA64 /* ProfileContactsView.swift */; };
+		B5B26F4F226DE41100B5DA64 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B26F4E226DE41100B5DA64 /* EditProfileViewController.swift */; };
 		B5F445602266EEBC0024DCFD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F4455F2266EEBC0024DCFD /* LoginView.swift */; };
 		B5F445622266F11A0024DCFD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F445612266F11A0024DCFD /* Constants.swift */; };
 		B5F445642266F1350024DCFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F445632266F1350024DCFD /* LoginViewController.swift */; };
@@ -96,6 +109,19 @@
 		B590BA752265E8BB0005920C /* MedicalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalCard.swift; sourceTree = "<group>"; };
 		B590BA772265FC750005920C /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		B590BA792265FC850005920C /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		B5B26F2F226D7BC300B5DA64 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		B5B26F31226D7CDD00B5DA64 /* ProfileHeaderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderButton.swift; sourceTree = "<group>"; };
+		B5B26F33226D7D2D00B5DA64 /* ProfileHeaderButtonsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderButtonsStack.swift; sourceTree = "<group>"; };
+		B5B26F37226D8CAA00B5DA64 /* MedCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCardViewController.swift; sourceTree = "<group>"; };
+		B5B26F39226D8D3B00B5DA64 /* MedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCardView.swift; sourceTree = "<group>"; };
+		B5B26F3B226DA6C600B5DA64 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		B5B26F3F226DBA0700B5DA64 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		B5B26F41226DBDB900B5DA64 /* ProfileMedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMedCardView.swift; sourceTree = "<group>"; };
+		B5B26F43226DBE6300B5DA64 /* MedCardTitleSubtitleStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCardTitleSubtitleStack.swift; sourceTree = "<group>"; };
+		B5B26F47226DC28400B5DA64 /* ProfileInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInstructionsView.swift; sourceTree = "<group>"; };
+		B5B26F4A226DC8E000B5DA64 /* ProfileInstructionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInstructionTableViewCell.swift; sourceTree = "<group>"; };
+		B5B26F4C226DD8EA00B5DA64 /* ProfileContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContactsView.swift; sourceTree = "<group>"; };
+		B5B26F4E226DE41100B5DA64 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		B5F4455F2266EEBC0024DCFD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B5F445612266F11A0024DCFD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B5F445632266F1350024DCFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +228,32 @@
 			path = Widget;
 			sourceTree = "<group>";
 		};
+		B5B26F35226D8A8200B5DA64 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B5B26F31226D7CDD00B5DA64 /* ProfileHeaderButton.swift */,
+				B5F44571226738300024DCFD /* SubmitButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		B5B26F36226D8AA300B5DA64 /* StackViews */ = {
+			isa = PBXGroup;
+			children = (
+				B5B26F33226D7D2D00B5DA64 /* ProfileHeaderButtonsStack.swift */,
+				B5B26F43226DBE6300B5DA64 /* MedCardTitleSubtitleStack.swift */,
+			);
+			path = StackViews;
+			sourceTree = "<group>";
+		};
+		B5B26F49226DC8C300B5DA64 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B5B26F4A226DC8E000B5DA64 /* ProfileInstructionTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		B5F445652266F14F0024DCFD /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,9 +272,16 @@
 				B590BA772265FC750005920C /* FormField.swift */,
 				B5F4456922672FCE0024DCFD /* SignUpView.swift */,
 				B5F4456F226734960024DCFD /* LinkTextView.swift */,
-				B5F44571226738300024DCFD /* SubmitButton.swift */,
 				B5611E3D2268A71C00D82546 /* MenuPanelHeaderView.swift */,
 				B585140322698EFA003CCE4E /* EmergencyView.swift */,
+				B5B26F2F226D7BC300B5DA64 /* ProfileHeaderView.swift */,
+				B5B26F39226D8D3B00B5DA64 /* MedCardView.swift */,
+				B5B26F35226D8A8200B5DA64 /* Buttons */,
+				B5B26F49226DC8C300B5DA64 /* Cells */,
+				B5B26F36226D8AA300B5DA64 /* StackViews */,
+				B5B26F41226DBDB900B5DA64 /* ProfileMedCardView.swift */,
+				B5B26F47226DC28400B5DA64 /* ProfileInstructionsView.swift */,
+				B5B26F4C226DD8EA00B5DA64 /* ProfileContactsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +294,10 @@
 				B5611E3922689F4A00D82546 /* EmergencyViewController.swift */,
 				B5611E3B2268A1E700D82546 /* MenuPanelViewController.swift */,
 				B585140122698B6D003CCE4E /* ProfileViewController.swift */,
+				B5B26F37226D8CAA00B5DA64 /* MedCardViewController.swift */,
+				B5B26F3B226DA6C600B5DA64 /* InstructionsViewController.swift */,
+				B5B26F3F226DBA0700B5DA64 /* ContactsViewController.swift */,
+				B5B26F4E226DE41100B5DA64 /* EditProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -442,26 +505,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B26F4B226DC8E000B5DA64 /* ProfileInstructionTableViewCell.swift in Sources */,
 				B590BA782265FC750005920C /* FormField.swift in Sources */,
 				B590BA722265E6790005920C /* Contact.swift in Sources */,
 				B590BA702265E5340005920C /* User.swift in Sources */,
 				B5F445602266EEBC0024DCFD /* LoginView.swift in Sources */,
+				B5B26F30226D7BC300B5DA64 /* ProfileHeaderView.swift in Sources */,
 				B5F44572226738300024DCFD /* SubmitButton.swift in Sources */,
 				B5F4456A22672FCE0024DCFD /* SignUpView.swift in Sources */,
 				B590BA7A2265FC850005920C /* extensions.swift in Sources */,
 				B5611E3E2268A71C00D82546 /* MenuPanelHeaderView.swift in Sources */,
+				B5B26F3A226D8D3B00B5DA64 /* MedCardView.swift in Sources */,
+				B5B26F4F226DE41100B5DA64 /* EditProfileViewController.swift in Sources */,
+				B5B26F34226D7D2D00B5DA64 /* ProfileHeaderButtonsStack.swift in Sources */,
 				B585140422698EFA003CCE4E /* EmergencyView.swift in Sources */,
 				B5611E3C2268A1E700D82546 /* MenuPanelViewController.swift in Sources */,
 				B585140222698B6D003CCE4E /* ProfileViewController.swift in Sources */,
+				B5B26F40226DBA0700B5DA64 /* ContactsViewController.swift in Sources */,
+				B5B26F38226D8CAA00B5DA64 /* MedCardViewController.swift in Sources */,
+				B5B26F44226DBE6300B5DA64 /* MedCardTitleSubtitleStack.swift in Sources */,
 				B5F445622266F11A0024DCFD /* Constants.swift in Sources */,
 				B5611E3A22689F4A00D82546 /* EmergencyViewController.swift in Sources */,
 				B590BA742265E80E0005920C /* Instruction.swift in Sources */,
 				B5021D532265D3E700906315 /* AppDelegate.swift in Sources */,
 				B50C0CB72268418100EDD7CF /* Connection.swift in Sources */,
 				B590BA762265E8BB0005920C /* MedicalCard.swift in Sources */,
+				B5B26F32226D7CDD00B5DA64 /* ProfileHeaderButton.swift in Sources */,
 				B5F4456C226731E80024DCFD /* SignUpViewController.swift in Sources */,
+				B5B26F48226DC28400B5DA64 /* ProfileInstructionsView.swift in Sources */,
 				B5F445642266F1350024DCFD /* LoginViewController.swift in Sources */,
+				B5B26F3C226DA6C600B5DA64 /* InstructionsViewController.swift in Sources */,
 				B5F44570226734960024DCFD /* LinkTextView.swift in Sources */,
+				B5B26F42226DBDB900B5DA64 /* ProfileMedCardView.swift in Sources */,
+				B5B26F4D226DD8EA00B5DA64 /* ProfileContactsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

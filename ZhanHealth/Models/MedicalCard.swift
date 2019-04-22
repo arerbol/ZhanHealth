@@ -10,9 +10,9 @@ import Foundation
 import RealmSwift
 
 class MedicalCard: Object {
-  @objc dynamic var dob: Date? = nil
+  @objc dynamic var dob: String? = nil
   @objc dynamic var diseases: String? = nil
-  let bloodType = RealmOptional<Int>()
+  @objc dynamic var bloodType: String? = nil
   @objc dynamic var rhesusFactor: String? = nil
   @objc dynamic var owner: User?
 }

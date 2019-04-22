@@ -101,8 +101,6 @@ extension FAPanelController {
       let leftMenuVC = MenuPanelViewController()
       let centerVC = ProfileViewController()
       let centerNavVC = UINavigationController(rootViewController: centerVC)
-      centerNavVC.navigationBar.barTintColor = .white
-      centerNavVC.navigationBar.tintColor = .black
       centerNavVC.navigationBar.isTranslucent = false
       self.center(centerNavVC).left(leftMenuVC)
     } else {

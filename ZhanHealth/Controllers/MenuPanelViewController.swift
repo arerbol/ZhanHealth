@@ -11,6 +11,8 @@ import EasyPeasy
 
 class MenuPanelViewController: UIViewController {
   
+  let conn = Connection()
+  
   lazy var tableView: UITableView = {
     let tv = UITableView()
     tv.delegate = self
@@ -33,7 +35,7 @@ class MenuPanelViewController: UIViewController {
 extension MenuPanelViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 6
+    return 5
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,20 +48,17 @@ extension MenuPanelViewController: UITableViewDataSource {
       imageName = "profile"
       title = "Profile"
     case 1:
-      imageName = "history"
-      title = "History"
+      imageName = "med_card"
+      title = "Med Card"
     case 2:
       imageName = "instructions"
       title = "Instructions"
     case 3:
+      imageName = "contacts"
+      title = "Contacts"
+    case 4:
       imageName = "faq"
       title = "FAQ"
-    case 4:
-      imageName = "help_us"
-      title = "Help us to develop"
-    case 5:
-      imageName = "edit"
-      title = "Change info"
     default:
       break
     }
@@ -82,29 +81,27 @@ extension MenuPanelViewController: UITableViewDelegate{
     let headerView = MenuPanelHeaderView()
     headerView.easy.layout(Height(100.heightProportion()),Width(250.widthProportion()))
     headerView.easy.layout(Edges(0))
-    headerView.nameLabel.text = "Adam Lambert"
+    if let user = conn.getAppUser() {
+      headerView.nameLabel.text = (user.firstname! + " " + user.lastname!)
+    }
     return headerView
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     self.tableView.deselectRow(at: indexPath, animated: true)
     let navVC = UINavigationController()
-    navVC.navigationBar.barTintColor = .white
-    navVC.navigationBar.tintColor = .black
     navVC.navigationBar.isTranslucent = false
     switch indexPath.row {
     case 0:
       navVC.viewControllers = [ProfileViewController()]
     case 1:
-      navVC.viewControllers = [ProfileViewController()]
+      navVC.viewControllers = [MedCardViewController()]
     case 2:
-      navVC.viewControllers = [ProfileViewController()]
+      navVC.viewControllers = [InstructionsViewController()]
     case 3:
-      navVC.viewControllers = [ProfileViewController()]
+      navVC.viewControllers = [ContactsViewController()]
     case 4:
-      navVC.viewControllers = [ProfileViewController()]
-    case 5:
-      navVC.viewControllers = [ProfileViewController()]
+      navVC.viewControllers = [EmergencyViewController()]
     default:
       break
     }

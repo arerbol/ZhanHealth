@@ -86,6 +86,35 @@ class SignUpView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
+  func validate() -> Bool {
+    if self.firstNameField.text == nil || self.firstNameField.text == "" {
+      self.firstNameField.errorMessage = "Enter Firstname"
+      return false
+    }
+    if self.lastNameField.text == nil || self.lastNameField.text == "" {
+      self.lastNameField.errorMessage = "Enter Lastname"
+      return false
+    }
+    if self.emailField.text == nil || self.emailField.text == "" {
+      self.emailField.errorMessage = "Enter Email"
+      return false
+    }
+    if self.passwordField.text == nil || self.passwordField.text == "" {
+      self.passwordField.errorMessage = "Enter Password"
+      return false
+    }
+    if self.confirmPasswordField.text == nil || self.confirmPasswordField.text == "" {
+      self.confirmPasswordField.errorMessage = "Confirm Password"
+      return false
+    }
+    if self.passwordField.text != self.confirmPasswordField.text {
+      self.passwordField.errorMessage = "Passwords don't match"
+      self.confirmPasswordField.errorMessage = "Passwords don't match"
+      return false
+    }
+    return true
+  }
+  
   fileprivate func setupViews(){
     [logoView, appNameLabel, firstNameField, lastNameField, emailField, passwordField, confirmPasswordField, signUpButton, signInTextView].forEach {
       self.addSubview($0)

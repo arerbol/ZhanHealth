@@ -14,7 +14,7 @@ class User: Object {
   @objc dynamic var lastname: String? = nil
   @objc dynamic var email: String? = nil
   @objc dynamic var password: String? = nil
-  let medicalCard = MedicalCard()
+  @objc dynamic var medicalCard: MedicalCard?
   let contacts = List<Contact>()
   let instructions = List<Instruction>()
 }
