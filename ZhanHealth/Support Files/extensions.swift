@@ -64,6 +64,16 @@ extension UIViewController {
     panel?.openLeft(animated: true)
   }
   
+  func openImageController() {
+    let ipVC = ImagePickerViewController()
+    let navVC = UINavigationController(rootViewController: ipVC)
+    navVC.navigationBar.barTintColor = .black
+    navVC.navigationBar.tintColor = .white
+    navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
+                                               NSAttributedString.Key.font: UIFont(name: Font.medium.rawValue, size: 16.widthProportion())!]
+    self.present(navVC, animated: true, completion: nil)
+  }
+  
 }
 
 

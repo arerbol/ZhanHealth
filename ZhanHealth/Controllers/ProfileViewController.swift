@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
   
   lazy var headerView: ProfileHeaderView = {
     let hv = ProfileHeaderView()
+    hv.imageButton.addTarget(self, action: #selector(chooseImage), for: .touchUpInside)
     hv.buttonsStack.medCardButton.addTarget(self, action: #selector(toggleViews(sender:)), for: .touchUpInside)
     hv.buttonsStack.instructionsButton.addTarget(self, action: #selector(toggleViews(sender:)), for: .touchUpInside)
     hv.buttonsStack.contactsButton.addTarget(self, action: #selector(toggleViews(sender: )), for: .touchUpInside)
@@ -92,6 +93,10 @@ class ProfileViewController: UIViewController {
     centerNavVC.navigationBar.isTranslucent = false
     panel?.center(centerNavVC)
     panel?.openCenter(animated: true)
+  }
+  
+  @objc func chooseImage() {
+      self.openImageController()
   }
   
   fileprivate func setupViews(){
