@@ -14,6 +14,24 @@ class Connection {
   fileprivate let realm = try! Realm()
   fileprivate let passwordKey = "userPassword"
   fileprivate let loginKey = "userLogin"
+  fileprivate let imageKey = "profileImage"
+  let userDefault = UserDefaults.standard
+
+  
+  func getProfileImage() -> UIImage {
+    var image: UIImage?
+    if let imageData = userDefault.data(forKey: imageKey) {
+      image = NSKeyedUnarchiver.unarchiveObject(with: imageData) as? UIImage
+    }
+    return image ?? UIImage(named: "add_photo")!
+  }
+  
+  func addProfileImage(image: UIImage) {
+    let userDefault = UserDefaults.standard
+    var imageData: NSData?
+    imageData = NSKeyedArchiver.archivedData(withRootObject: image) as NSData?
+    userDefault.set(imageData, forKey: imageKey)
+  }
   
   func register(firstname: String, lastname: String, email: String, password: String) -> Bool {
     let foundUser = realm.objects(User.self).filter("email='\(email)' AND password='\(password)'").first
@@ -122,20 +140,20 @@ class Connection {
   }
   
   func logOut() {
-    UserDefaults.standard.removeObject(forKey: loginKey)
-    UserDefaults.standard.removeObject(forKey: passwordKey)
-    UserDefaults.standard.synchronize()
+    userDefault.removeObject(forKey: loginKey)
+    userDefault.removeObject(forKey: passwordKey)
+    userDefault.synchronize()
   }
   
   func saveAppUser(user: User) {
-    UserDefaults.standard.set(user.email!, forKey: loginKey)
-    UserDefaults.standard.set(user.password!, forKey: passwordKey)
-    UserDefaults.standard.synchronize()
+    userDefault.set(user.email!, forKey: loginKey)
+    userDefault.set(user.password!, forKey: passwordKey)
+    userDefault.synchronize()
   }
   
   func getAppUser() -> User? {
-    if let login = UserDefaults.standard.value(forKey: loginKey),
-      let password = UserDefaults.standard.value(forKey: passwordKey) {
+    if let login = userDefault.value(forKey: loginKey),
+      let password = userDefault.value(forKey: passwordKey) {
       let user = realm.objects(User.self).filter("email='\(login)' AND password='\(password)'").first
       return user
     }

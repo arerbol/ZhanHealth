@@ -13,6 +13,14 @@ class MenuPanelViewController: UIViewController {
   
   let conn = Connection()
   
+  lazy var headerView: MenuPanelHeaderView = {
+    let headerView = MenuPanelHeaderView()
+    headerView.easy.layout(Height(100.heightProportion()),Width(250.widthProportion()))
+    headerView.imageButton.addTarget(self, action: #selector(chooseImage), for: .touchUpInside)
+    return headerView
+  }()
+
+  
   lazy var tableView: UITableView = {
     let tv = UITableView()
     tv.delegate = self
@@ -28,6 +36,25 @@ class MenuPanelViewController: UIViewController {
     view.backgroundColor = .white
     view.addSubview(tableView)
     tableView.easy.layout(Edges(0), Top(50))
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    if let user = conn.getAppUser() {
+      headerView.nameLabel.text = (user.firstname! + " " + user.lastname!)
+      let profileImage = conn.getProfileImage()
+      headerView.imageButton.setImage(profileImage, for: .normal)
+    }
+  }
+  
+  @objc func chooseImage() {
+    let ipVC = ImagePickerViewController()
+    let navVC = UINavigationController(rootViewController: ipVC)
+    navVC.navigationBar.barTintColor = .black
+    navVC.navigationBar.tintColor = .white
+    navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
+                                               NSAttributedString.Key.font: UIFont(name: Font.medium.rawValue, size: 16.widthProportion())!]
+    self.present(navVC, animated: true, completion: nil)
   }
   
 }
@@ -76,14 +103,7 @@ extension MenuPanelViewController: UITableViewDataSource {
 
 extension MenuPanelViewController: UITableViewDelegate{
   
-  
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let headerView = MenuPanelHeaderView()
-    headerView.easy.layout(Height(100.heightProportion()),Width(250.widthProportion()))
-    headerView.easy.layout(Edges(0))
-    if let user = conn.getAppUser() {
-      headerView.nameLabel.text = (user.firstname! + " " + user.lastname!)
-    }
     return headerView
   }
   

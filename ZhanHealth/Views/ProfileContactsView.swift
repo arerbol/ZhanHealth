@@ -94,6 +94,14 @@ extension ProfileContactsView: UITableViewDelegate{
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
+    if let url = URL(string: "tel://\(user!.contacts[indexPath.row].phone!)"), UIApplication.shared.canOpenURL(url) {
+      print(url)
+      if #available(iOS 10, *) {
+        UIApplication.shared.open(url)
+      } else {
+        UIApplication.shared.openURL(url)
+      }
+    }
   }
 }
 

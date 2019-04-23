@@ -12,6 +12,7 @@ class LinkTextView: UITextView {
   
   override init(frame: CGRect, textContainer: NSTextContainer?) {
     super.init(frame: frame, textContainer: textContainer)
+    self.backgroundColor = .clear
     self.isEditable = false
     self.isScrollEnabled = false
     let linkAttributes: [NSMutableAttributedString.Key : Any] = [.foregroundColor: AppColor.blue]

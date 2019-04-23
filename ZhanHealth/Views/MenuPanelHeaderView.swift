@@ -10,13 +10,13 @@ import UIKit
 import EasyPeasy
 
 class MenuPanelHeaderView: UIView {
-  
-  lazy var avatar: UIImageView = {
-    let iv = UIImageView()
-    iv.image = UIImage(named: "adult")
-    iv.layer.cornerRadius = 5
-    iv.contentMode = .scaleAspectFit
-    return iv
+ 
+  lazy var imageButton: UIButton = {
+    let btn = UIButton()
+    btn.imageView?.contentMode = .scaleAspectFit
+    btn.layer.cornerRadius = 10
+    btn.layer.masksToBounds = true
+    return btn
   }()
   
   lazy var nameLabel: UILabel = {
@@ -39,18 +39,17 @@ class MenuPanelHeaderView: UIView {
   }
   
   fileprivate func setupViews(){
-    [avatar, nameLabel].forEach {
+    [imageButton, nameLabel].forEach {
       self.addSubview($0)
     }
   }
   
   fileprivate func setupConstraints() {
-    avatar.easy.layout(Left(10.widthProportion()),
-                       Top(5.heightProportion()),
-                       Bottom(5.heightProportion()),
-                       Width(75.widthProportion()))
-    nameLabel.easy.layout(CenterY(0).to(avatar),
-                          Left(10.widthProportion()).to(avatar),
+    imageButton.easy.layout(Left(10.widthProportion()),
+                            CenterY(0),
+                            Size(80.widthProportion()))
+    nameLabel.easy.layout(CenterY(0).to(imageButton),
+                          Left(10.widthProportion()).to(imageButton),
                           Right(5.widthProportion()))
   }
 }

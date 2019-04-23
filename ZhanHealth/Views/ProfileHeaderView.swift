@@ -11,11 +11,12 @@ import EasyPeasy
 
 class ProfileHeaderView: UIView {
   
-  lazy var imageView: UIImageView = {
-    let iv = UIImageView()
-    iv.image = UIImage(named: "adult")
-    iv.contentMode = .scaleAspectFit
-    return iv
+  lazy var imageButton: UIButton = {
+    let btn = UIButton()
+    btn.imageView?.contentMode = .scaleAspectFit
+    btn.layer.cornerRadius = 10
+    btn.layer.masksToBounds = true
+    return btn
   }()
   
   lazy var nameLabel: UILabel = {
@@ -47,21 +48,21 @@ class ProfileHeaderView: UIView {
   }
   
   fileprivate func setupViews(){
-    [imageView, nameLabel, buttonsStack].forEach {
+    [imageButton, nameLabel, buttonsStack].forEach {
       self.addSubview($0)
     }
   }
   
   fileprivate func setupConstraints() {
-    imageView.easy.layout(Top(20.heightProportion()),
+    imageButton.easy.layout(Top(20.heightProportion()),
                           Left(20.widthProportion()),
-                          Size(70.widthProportion()))
-    nameLabel.easy.layout(CenterY(0).to(imageView),
-                          Left(20.widthProportion()).to(imageView),
+                          Size(130.widthProportion()))
+    nameLabel.easy.layout(CenterY(0).to(imageButton),
+                          Left(20.widthProportion()).to(imageButton),
                           Right(20.widthProportion()))
     buttonsStack.easy.layout(Bottom(10.heightProportion()),
                              CenterX(0),
-                             Top(20.heightProportion()).to(imageView))
+                             Top(20.heightProportion()).to(imageButton))
   }
 
 }

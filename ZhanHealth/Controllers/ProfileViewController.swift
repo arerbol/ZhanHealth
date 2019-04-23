@@ -42,12 +42,17 @@ class ProfileViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    user = conn.getAppUser()!
     view.backgroundColor = AppColor.gray
     navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(self.showMenuPanel)), UIBarButtonItem(title: "Profile", style: .plain, target: self, action: nil)]
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editProfile))
     setupViews()
     setupConstraints()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    user = conn.getAppUser()!
+    headerView.imageButton.setImage(conn.getProfileImage(), for: .normal) 
     headerView.nameLabel.text = user!.firstname! + " " + user!.lastname!
     medCardView.setData(user: user!)
     instuctionsView.addUserInstructions(user: user!)

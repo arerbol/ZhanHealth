@@ -16,6 +16,8 @@
 		B5611E3A22689F4A00D82546 /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5611E3922689F4A00D82546 /* EmergencyViewController.swift */; };
 		B5611E3C2268A1E700D82546 /* MenuPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5611E3B2268A1E700D82546 /* MenuPanelViewController.swift */; };
 		B5611E3E2268A71C00D82546 /* MenuPanelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5611E3D2268A71C00D82546 /* MenuPanelHeaderView.swift */; };
+		B57530B7226F1B9E00A64932 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57530B6226F1B9E00A64932 /* ImagePickerViewController.swift */; };
+		B57530B9226F222800A64932 /* imagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57530B8226F222800A64932 /* imagePicker.swift */; };
 		B585140222698B6D003CCE4E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585140122698B6D003CCE4E /* ProfileViewController.swift */; };
 		B585140422698EFA003CCE4E /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585140322698EFA003CCE4E /* EmergencyView.swift */; };
 		B58514062269909D003CCE4E /* Poppins-semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B58514052269909D003CCE4E /* Poppins-semibold.ttf */; };
@@ -91,6 +93,8 @@
 		B5611E3922689F4A00D82546 /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		B5611E3B2268A1E700D82546 /* MenuPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPanelViewController.swift; sourceTree = "<group>"; };
 		B5611E3D2268A71C00D82546 /* MenuPanelHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPanelHeaderView.swift; sourceTree = "<group>"; };
+		B57530B6226F1B9E00A64932 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		B57530B8226F222800A64932 /* imagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePicker.swift; sourceTree = "<group>"; };
 		B585140122698B6D003CCE4E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B585140322698EFA003CCE4E /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		B58514052269909D003CCE4E /* Poppins-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-semibold.ttf"; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 				B5B26F41226DBDB900B5DA64 /* ProfileMedCardView.swift */,
 				B5B26F47226DC28400B5DA64 /* ProfileInstructionsView.swift */,
 				B5B26F4C226DD8EA00B5DA64 /* ProfileContactsView.swift */,
+				B57530B8226F222800A64932 /* imagePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				B5B26F3B226DA6C600B5DA64 /* InstructionsViewController.swift */,
 				B5B26F3F226DBA0700B5DA64 /* ContactsViewController.swift */,
 				B5B26F4E226DE41100B5DA64 /* EditProfileViewController.swift */,
+				B57530B6226F1B9E00A64932 /* ImagePickerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -517,6 +523,7 @@
 				B5611E3E2268A71C00D82546 /* MenuPanelHeaderView.swift in Sources */,
 				B5B26F3A226D8D3B00B5DA64 /* MedCardView.swift in Sources */,
 				B5B26F4F226DE41100B5DA64 /* EditProfileViewController.swift in Sources */,
+				B57530B9226F222800A64932 /* imagePicker.swift in Sources */,
 				B5B26F34226D7D2D00B5DA64 /* ProfileHeaderButtonsStack.swift in Sources */,
 				B585140422698EFA003CCE4E /* EmergencyView.swift in Sources */,
 				B5611E3C2268A1E700D82546 /* MenuPanelViewController.swift in Sources */,
@@ -525,6 +532,7 @@
 				B5B26F38226D8CAA00B5DA64 /* MedCardViewController.swift in Sources */,
 				B5B26F44226DBE6300B5DA64 /* MedCardTitleSubtitleStack.swift in Sources */,
 				B5F445622266F11A0024DCFD /* Constants.swift in Sources */,
+				B57530B7226F1B9E00A64932 /* ImagePickerViewController.swift in Sources */,
 				B5611E3A22689F4A00D82546 /* EmergencyViewController.swift in Sources */,
 				B590BA742265E80E0005920C /* Instruction.swift in Sources */,
 				B5021D532265D3E700906315 /* AppDelegate.swift in Sources */,
