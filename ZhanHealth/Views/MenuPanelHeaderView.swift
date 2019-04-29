@@ -13,7 +13,7 @@ class MenuPanelHeaderView: UIView {
  
   lazy var imageButton: UIButton = {
     let btn = UIButton()
-    btn.imageView?.contentMode = .scaleAspectFit
+    btn.imageView?.contentMode = .scaleAspectFill
     btn.layer.cornerRadius = 10
     btn.layer.masksToBounds = true
     return btn
@@ -47,7 +47,8 @@ class MenuPanelHeaderView: UIView {
   fileprivate func setupConstraints() {
     imageButton.easy.layout(Left(10.widthProportion()),
                             CenterY(0),
-                            Size(80.widthProportion()))
+                            Width(80.widthProportion()),
+                            Height(70.heightProportion()))
     nameLabel.easy.layout(CenterY(0).to(imageButton),
                           Left(10.widthProportion()).to(imageButton),
                           Right(5.widthProportion()))

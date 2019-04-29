@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3F0467D61AA1E9ADAD201B0A /* Pods_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA947A644883896FFB393063 /* Pods_Widget.framework */; };
+		7B33741712DF29A24EECCB1B /* Pods_ZhanHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B585142722699BC4003CCE4E /* Pods_ZhanHealth.framework */; };
 		B5021D532265D3E700906315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5021D522265D3E700906315 /* AppDelegate.swift */; };
 		B5021D582265D3E700906315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5021D562265D3E700906315 /* Main.storyboard */; };
 		B5021D5A2265D3E900906315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5021D592265D3E900906315 /* Assets.xcassets */; };
 		B5021D5D2265D3E900906315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5021D5B2265D3E900906315 /* LaunchScreen.storyboard */; };
 		B50C0CB72268418100EDD7CF /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50C0CB62268418100EDD7CF /* Connection.swift */; };
+		B53527A02270220800938FDE /* Telegram.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535279F2270220800938FDE /* Telegram.swift */; };
+		B556B9EE22717B1F00812CEC /* SMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556B9ED22717B1F00812CEC /* SMS.swift */; };
 		B5611E3A22689F4A00D82546 /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5611E3922689F4A00D82546 /* EmergencyViewController.swift */; };
 		B5611E3C2268A1E700D82546 /* MenuPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5611E3B2268A1E700D82546 /* MenuPanelViewController.swift */; };
 		B5611E3E2268A71C00D82546 /* MenuPanelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5611E3D2268A71C00D82546 /* MenuPanelHeaderView.swift */; };
@@ -90,6 +93,8 @@
 		B5021D5C2265D3E900906315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5021D5E2265D3E900906315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B50C0CB62268418100EDD7CF /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		B535279F2270220800938FDE /* Telegram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telegram.swift; sourceTree = "<group>"; };
+		B556B9ED22717B1F00812CEC /* SMS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMS.swift; sourceTree = "<group>"; };
 		B5611E3922689F4A00D82546 /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		B5611E3B2268A1E700D82546 /* MenuPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPanelViewController.swift; sourceTree = "<group>"; };
 		B5611E3D2268A71C00D82546 /* MenuPanelHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPanelHeaderView.swift; sourceTree = "<group>"; };
@@ -147,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E4A104246991DF3621FD2F /* Pods_ZhanHealth.framework in Frameworks */,
+				7B33741712DF29A24EECCB1B /* Pods_ZhanHealth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +224,8 @@
 				B5021D592265D3E900906315 /* Assets.xcassets */,
 				B5021D5E2265D3E900906315 /* Info.plist */,
 				B50C0CB62268418100EDD7CF /* Connection.swift */,
+				B535279F2270220800938FDE /* Telegram.swift */,
+				B556B9ED22717B1F00812CEC /* SMS.swift */,
 			);
 			path = ZhanHealth;
 			sourceTree = "<group>";
@@ -453,6 +461,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZhanHealth/Pods-ZhanHealth-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework",
 				"${BUILT_PRODUCTS_DIR}/FAPanels/FAPanels.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
@@ -460,6 +469,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyPeasy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FAPanels.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -515,6 +525,7 @@
 				B590BA782265FC750005920C /* FormField.swift in Sources */,
 				B590BA722265E6790005920C /* Contact.swift in Sources */,
 				B590BA702265E5340005920C /* User.swift in Sources */,
+				B556B9EE22717B1F00812CEC /* SMS.swift in Sources */,
 				B5F445602266EEBC0024DCFD /* LoginView.swift in Sources */,
 				B5B26F30226D7BC300B5DA64 /* ProfileHeaderView.swift in Sources */,
 				B5F44572226738300024DCFD /* SubmitButton.swift in Sources */,
@@ -525,6 +536,7 @@
 				B5B26F4F226DE41100B5DA64 /* EditProfileViewController.swift in Sources */,
 				B57530B9226F222800A64932 /* imagePicker.swift in Sources */,
 				B5B26F34226D7D2D00B5DA64 /* ProfileHeaderButtonsStack.swift in Sources */,
+				B53527A02270220800938FDE /* Telegram.swift in Sources */,
 				B585140422698EFA003CCE4E /* EmergencyView.swift in Sources */,
 				B5611E3C2268A1E700D82546 /* MenuPanelViewController.swift in Sources */,
 				B585140222698B6D003CCE4E /* ProfileViewController.swift in Sources */,

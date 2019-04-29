@@ -58,12 +58,7 @@ extension UIViewController {
     alertController.addAction(UIAlertAction(title: "OK", style: .default ,handler: action))
     self.present(alertController, animated: true, completion: nil)
   }
-  
-  
-  @objc func showMenuPanel() {
-    panel?.openLeft(animated: true)
-  }
-  
+
   func openImageController() {
     let ipVC = ImagePickerViewController()
     let navVC = UINavigationController(rootViewController: ipVC)
@@ -72,6 +67,10 @@ extension UIViewController {
     navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
                                                NSAttributedString.Key.font: UIFont(name: Font.medium.rawValue, size: 16.widthProportion())!]
     self.present(navVC, animated: true, completion: nil)
+  }
+  
+  @objc func showMenuPanel() {
+    panel?.openLeft(animated: true)
   }
   
 }

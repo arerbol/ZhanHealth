@@ -17,5 +17,6 @@ target 'ZhanHealth' do
     pod 'EasyPeasy'
     pod 'RealmSwift'
     pod 'FAPanels'
+    pod 'IQKeyboardManagerSwift'
 
 end

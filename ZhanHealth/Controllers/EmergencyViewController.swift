@@ -10,20 +10,12 @@ import UIKit
 import EasyPeasy
 import AudioToolbox
 import AVFoundation
+import MapKit
 
 class EmergencyViewController: UIViewController {
-  
-//  static let soundId: SystemSoundID? = {
-//    guard let soundURL = Bundle.main.url(forResource: "Chirp", withExtension: "wav") else {
-//      return nil
-//    }
-//
-//    var soundId: SystemSoundID = 0
-//    AudioServicesCreateSystemSoundID(soundURL as CFURL, &soundId)
-//    return soundId
-//  }()
-  
+
   var timer: Timer?
+  let conn = Connection()
   
   lazy var mainView: EmergencyView = {
     let mv = EmergencyView()
@@ -42,6 +34,14 @@ class EmergencyViewController: UIViewController {
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(true)
     timer?.invalidate()
+  }
+  
+  func getCurrentLocation() -> CLLocation? {
+    if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+      CLLocationManager.authorizationStatus() ==  .authorizedAlways){
+      return locManager.location
+    }
+    return nil
   }
 
   
@@ -63,6 +63,40 @@ class EmergencyViewController: UIViewController {
     centerNavVC.navigationBar.isTranslucent = false
     panel?.center(centerNavVC)
     panel?.openCenter(animated: true)
+    sendTelegramMessage()
+    sendSMS()
+  }
+  
+  func sendTelegramMessage() {
+    let bot = ZhanHealthBot()
+    let user = conn.getAppUser()!
+    var message = ""
+    message += "\nFirstname: " + (user.firstname ?? "")
+    message += "\nLastname: " + (user.lastname ?? "")
+    message += "\nDate of birth: " + (user.medicalCard?.dob ?? "")
+    message += "\nChronicle diseases: " + (user.medicalCard?.diseases ?? "")
+    message += "\nBlood type: " + (user.medicalCard?.bloodType ?? "")
+    message += "\nRhesus factor: " + (user.medicalCard?.rhesusFactor ?? "")
+    if let currentLocation = getCurrentLocation() {
+      message += "\nLocation: " + "\nhttps://maps.google.com/?q=\(currentLocation.coordinate.latitude),\(currentLocation.coordinate.longitude)"
+    }
+    bot.sendMessage(message: message)
+  }
+  
+  func sendSMS() {
+    let sms = Sms()
+    let user = conn.getAppUser()!
+    var message = ""
+    message += "Help Me! "
+    message += user.firstname ?? ""
+    message += " " + (user.lastname ?? "")
+//    if let currentLocation = getCurrentLocation() {
+//      message += "\nLocation: " + "\nhttps://maps.google.com/?q=\(currentLocation.coordinate.latitude),\(currentLocation.coordinate.longitude)"
+//    }
+    for contact in user.contacts {
+      sms.send(message: message, phone: contact.phone!)
+    }
+    
   }
   
 }

@@ -44,7 +44,7 @@ class ContactsViewController: UIViewController {
         textField.placeholder = "Enter Name"
       }
       alertController.addTextField { (textField) in
-        textField.placeholder = "Enter Phone number"
+        textField.placeholder = "Enter Phone number: +7 777 777 77 77"
       }
       
       let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: { action -> Void in })

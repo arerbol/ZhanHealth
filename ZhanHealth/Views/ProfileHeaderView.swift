@@ -13,7 +13,7 @@ class ProfileHeaderView: UIView {
   
   lazy var imageButton: UIButton = {
     let btn = UIButton()
-    btn.imageView?.contentMode = .scaleAspectFit
+    btn.imageView?.contentMode = .scaleAspectFill
     btn.layer.cornerRadius = 10
     btn.layer.masksToBounds = true
     return btn
@@ -54,15 +54,16 @@ class ProfileHeaderView: UIView {
   }
   
   fileprivate func setupConstraints() {
-    imageButton.easy.layout(Top(20.heightProportion()),
+    imageButton.easy.layout(Top(10.heightProportion()),
                           Left(20.widthProportion()),
-                          Size(130.widthProportion()))
+                          Width(130.widthProportion()),
+                          Height(100.heightProportion()))
     nameLabel.easy.layout(CenterY(0).to(imageButton),
                           Left(20.widthProportion()).to(imageButton),
                           Right(20.widthProportion()))
     buttonsStack.easy.layout(Bottom(10.heightProportion()),
                              CenterX(0),
-                             Top(20.heightProportion()).to(imageButton))
+                             Top(10.heightProportion()).to(imageButton))
   }
 
 }

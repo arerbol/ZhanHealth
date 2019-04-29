@@ -40,11 +40,10 @@ class MenuPanelViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(true)
-    if let user = conn.getAppUser() {
+    let user = conn.getAppUser()!
       headerView.nameLabel.text = (user.firstname! + " " + user.lastname!)
       let profileImage = conn.getProfileImage()
       headerView.imageButton.setImage(profileImage, for: .normal)
-    }
   }
   
   @objc func chooseImage() {

@@ -8,7 +8,11 @@
 
 import UIKit
 import FAPanels
+import MapKit
+import IQKeyboardManagerSwift
 
+var locManager = CLLocationManager()
+ 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,11 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    locManager.requestWhenInUseAuthorization()
     configureMainPage()
     configureNavBar()
+    IQKeyboardManager.shared.enable = true
     return true
   }
-  
+
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
     if conn.isLoggedIn() {
       if let scheme = url.scheme {
