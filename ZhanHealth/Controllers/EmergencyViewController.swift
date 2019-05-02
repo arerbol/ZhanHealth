@@ -90,9 +90,9 @@ class EmergencyViewController: UIViewController {
     message += "Help Me! "
     message += user.firstname ?? ""
     message += " " + (user.lastname ?? "")
-//    if let currentLocation = getCurrentLocation() {
-//      message += "\nLocation: " + "\nhttps://maps.google.com/?q=\(currentLocation.coordinate.latitude),\(currentLocation.coordinate.longitude)"
-//    }
+    if let currentLocation = getCurrentLocation() {
+        message += "\nlatitude: \(currentLocation.coordinate.latitude), longitude: \(currentLocation.coordinate.longitude)"
+    }
     for contact in user.contacts {
       sms.send(message: message, phone: contact.phone!)
     }
