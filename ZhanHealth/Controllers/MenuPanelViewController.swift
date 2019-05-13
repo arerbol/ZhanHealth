@@ -114,7 +114,7 @@ extension MenuPanelViewController: UITableViewDelegate{
     case 3:
       navVC.viewControllers = [ContactsViewController()]
     case 4:
-      navVC.viewControllers = [EmergencyViewController()]
+      navVC.viewControllers = [FAQViewController()]
     default:
       break
     }

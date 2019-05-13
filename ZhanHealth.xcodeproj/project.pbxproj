@@ -15,6 +15,10 @@
 		B5021D5D2265D3E900906315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5021D5B2265D3E900906315 /* LaunchScreen.storyboard */; };
 		B50C0CB72268418100EDD7CF /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50C0CB62268418100EDD7CF /* Connection.swift */; };
 		B53527A02270220800938FDE /* Telegram.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535279F2270220800938FDE /* Telegram.swift */; };
+		B53AEDD322892ADB002FEBD6 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53AEDD222892ADB002FEBD6 /* FAQViewController.swift */; };
+		B53AEDD5228936CF002FEBD6 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53AEDD4228936CF002FEBD6 /* FAQView.swift */; };
+		B53AEDD722893750002FEBD6 /* FaqQuestionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53AEDD622893750002FEBD6 /* FaqQuestionLabel.swift */; };
+		B53AEDD9228937F6002FEBD6 /* FaqStepStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53AEDD8228937F6002FEBD6 /* FaqStepStackView.swift */; };
 		B556B9EE22717B1F00812CEC /* SMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556B9ED22717B1F00812CEC /* SMS.swift */; };
 		B5611E3A22689F4A00D82546 /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5611E3922689F4A00D82546 /* EmergencyViewController.swift */; };
 		B5611E3C2268A1E700D82546 /* MenuPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5611E3B2268A1E700D82546 /* MenuPanelViewController.swift */; };
@@ -94,6 +98,10 @@
 		B5021D5E2265D3E900906315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B50C0CB62268418100EDD7CF /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		B535279F2270220800938FDE /* Telegram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telegram.swift; sourceTree = "<group>"; };
+		B53AEDD222892ADB002FEBD6 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		B53AEDD4228936CF002FEBD6 /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
+		B53AEDD622893750002FEBD6 /* FaqQuestionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqQuestionLabel.swift; sourceTree = "<group>"; };
+		B53AEDD8228937F6002FEBD6 /* FaqStepStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqStepStackView.swift; sourceTree = "<group>"; };
 		B556B9ED22717B1F00812CEC /* SMS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMS.swift; sourceTree = "<group>"; };
 		B5611E3922689F4A00D82546 /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		B5611E3B2268A1E700D82546 /* MenuPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPanelViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +260,7 @@
 		B5B26F36226D8AA300B5DA64 /* StackViews */ = {
 			isa = PBXGroup;
 			children = (
+				B53AEDD8228937F6002FEBD6 /* FaqStepStackView.swift */,
 				B5B26F33226D7D2D00B5DA64 /* ProfileHeaderButtonsStack.swift */,
 				B5B26F43226DBE6300B5DA64 /* MedCardTitleSubtitleStack.swift */,
 			);
@@ -295,6 +304,8 @@
 				B5B26F47226DC28400B5DA64 /* ProfileInstructionsView.swift */,
 				B5B26F4C226DD8EA00B5DA64 /* ProfileContactsView.swift */,
 				B57530B8226F222800A64932 /* imagePicker.swift */,
+				B53AEDD4228936CF002FEBD6 /* FAQView.swift */,
+				B53AEDD622893750002FEBD6 /* FaqQuestionLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,6 +323,7 @@
 				B5B26F3F226DBA0700B5DA64 /* ContactsViewController.swift */,
 				B5B26F4E226DE41100B5DA64 /* EditProfileViewController.swift */,
 				B57530B6226F1B9E00A64932 /* ImagePickerViewController.swift */,
+				B53AEDD222892ADB002FEBD6 /* FAQViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -392,6 +404,7 @@
 				TargetAttributes = {
 					B5021D4E2265D3E700906315 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -525,13 +538,16 @@
 				B590BA782265FC750005920C /* FormField.swift in Sources */,
 				B590BA722265E6790005920C /* Contact.swift in Sources */,
 				B590BA702265E5340005920C /* User.swift in Sources */,
+				B53AEDD9228937F6002FEBD6 /* FaqStepStackView.swift in Sources */,
 				B556B9EE22717B1F00812CEC /* SMS.swift in Sources */,
 				B5F445602266EEBC0024DCFD /* LoginView.swift in Sources */,
 				B5B26F30226D7BC300B5DA64 /* ProfileHeaderView.swift in Sources */,
 				B5F44572226738300024DCFD /* SubmitButton.swift in Sources */,
 				B5F4456A22672FCE0024DCFD /* SignUpView.swift in Sources */,
 				B590BA7A2265FC850005920C /* extensions.swift in Sources */,
+				B53AEDD5228936CF002FEBD6 /* FAQView.swift in Sources */,
 				B5611E3E2268A71C00D82546 /* MenuPanelHeaderView.swift in Sources */,
+				B53AEDD322892ADB002FEBD6 /* FAQViewController.swift in Sources */,
 				B5B26F3A226D8D3B00B5DA64 /* MedCardView.swift in Sources */,
 				B5B26F4F226DE41100B5DA64 /* EditProfileViewController.swift in Sources */,
 				B57530B9226F222800A64932 /* imagePicker.swift in Sources */,
@@ -544,6 +560,7 @@
 				B5B26F38226D8CAA00B5DA64 /* MedCardViewController.swift in Sources */,
 				B5B26F44226DBE6300B5DA64 /* MedCardTitleSubtitleStack.swift in Sources */,
 				B5F445622266F11A0024DCFD /* Constants.swift in Sources */,
+				B53AEDD722893750002FEBD6 /* FaqQuestionLabel.swift in Sources */,
 				B57530B7226F1B9E00A64932 /* ImagePickerViewController.swift in Sources */,
 				B5611E3A22689F4A00D82546 /* EmergencyViewController.swift in Sources */,
 				B590BA742265E80E0005920C /* Instruction.swift in Sources */,
@@ -729,6 +746,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6E7YC9R85H;
 				INFOPLIST_FILE = ZhanHealth/Info.plist;
@@ -739,6 +757,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "a-erbol.ZhanHealth";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -750,6 +769,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6E7YC9R85H;
 				INFOPLIST_FILE = ZhanHealth/Info.plist;

@@ -29,6 +29,8 @@ class EmergencyViewController: UIViewController {
     view = mainView
     navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(self.showMenuPanel)), UIBarButtonItem(title: "Emergency Call", style: .plain, target: self, action: nil)]
     loopSoundAndVibrate()
+    sendTelegramMessage()
+    sendSMS()
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -63,8 +65,6 @@ class EmergencyViewController: UIViewController {
     centerNavVC.navigationBar.isTranslucent = false
     panel?.center(centerNavVC)
     panel?.openCenter(animated: true)
-    sendTelegramMessage()
-    sendSMS()
   }
   
   func sendTelegramMessage() {
