@@ -21,9 +21,11 @@ class LoginViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view = mainView
+//    добавляем наш Extension
     self.hideKeyboardWhenTappedAround()
   }
   
+//    вход, проверка в базе
   @objc func signIn() {
     let conn = Connection()
     if validate() {
@@ -36,11 +38,13 @@ class LoginViewController: UIViewController {
     }
   }
   
+//  вход в приложение, ставим центр, и открываем его
   func enterToApp() {
     panel?.setCenter(isLoggedIn: true)
     panel?.openCenter(animated: true)
   }
   
+// валидация данных
   func validate() -> Bool {
     if mainView.emailField.text == nil || mainView.emailField.text == "" {
       mainView.emailField.errorMessage = "Enter email"
@@ -57,6 +61,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: UITextViewDelegate {
   
+//    Ссылочные слова, ловим их при нажатии и делаем нужное действие
   @available(iOS 10.0, *)
   func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
     switch URL.absoluteString {

@@ -9,6 +9,7 @@
 import UIKit
 import FAPanels
 
+// Extension для увеличения размеров пропорционально
 extension Int{
   func heightProportion() -> CGFloat {
     return CGFloat(self)*Screen.heightProportion
@@ -18,17 +19,21 @@ extension Int{
   }
 }
 
+// Extensions для ViewController
 extension UIViewController {
+// Добавляет жест, которая убирает клавиатуру при нажатии на пустое место
   func hideKeyboardWhenTappedAround() {
     let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
     tap.cancelsTouchesInView = false
     view.addGestureRecognizer(tap)
   }
   
+// Функция, убрать клавиатуру
   @objc func dismissKeyboard() {
     view.endEditing(true)
   }
   
+// Показывает toast, используется для результата
   func showToast(message: String) {
     
     let toastWidth = Screen.width-40.widthProportion()
@@ -53,12 +58,14 @@ extension UIViewController {
     })
   }
   
+//    Показать Alert
   func showAlert(title: String, text: String, action: @escaping (UIAlertAction) -> Void) {
     let alertController = UIAlertController(title: title, message: text, preferredStyle: .alert)
     alertController.addAction(UIAlertAction(title: "OK", style: .default ,handler: action))
     self.present(alertController, animated: true, completion: nil)
   }
 
+//    Открыть Controller выборки фото
   func openImageController() {
     let ipVC = ImagePickerViewController()
     let navVC = UINavigationController(rootViewController: ipVC)
@@ -69,6 +76,7 @@ extension UIViewController {
     self.present(navVC, animated: true, completion: nil)
   }
   
+//    Показать левое меню
   @objc func showMenuPanel() {
     panel?.openLeft(animated: true)
   }
@@ -78,6 +86,7 @@ extension UIViewController {
 
 extension NSMutableAttributedString {
   
+//    делает ссылкой нужное слово в тексте
   public func setAsLink(textToFind: String, linkURL: String) -> Bool {
     
     let foundRange = self.mutableString.range(of: textToFind)
@@ -92,6 +101,7 @@ extension NSMutableAttributedString {
 
 
 extension UIView {
+//    градиент для view
   func setGradientBackground(){
     let gradientLayer = CAGradientLayer()
     gradientLayer.frame = self.bounds
@@ -105,6 +115,7 @@ extension UIView {
 }
 
 extension FAPanelController {
+//    меняем центральный Controller
   func setCenter(isLoggedIn: Bool = false){
     if isLoggedIn {
       let leftMenuVC = MenuPanelViewController()

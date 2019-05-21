@@ -33,6 +33,7 @@ class EditProfileViewController: UIViewController {
     setData()
   }
   
+//    установка данных профиля на вьюху
   func setData() {
     if let user = conn.getAppUser() {
       mainView.firstNameField.text = user.firstname

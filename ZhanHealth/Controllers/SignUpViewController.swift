@@ -23,6 +23,7 @@ class SignUpViewController: UIViewController {
     self.hideKeyboardWhenTappedAround()
   }
   
+//    регистрация
   @objc func signUp() {
     let conn = Connection()
     if mainView.validate() {

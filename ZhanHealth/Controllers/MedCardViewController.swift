@@ -27,6 +27,7 @@ class MedCardViewController: UIViewController {
     navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(self.showMenuPanel)), UIBarButtonItem(title: "Med Card", style: .plain, target: self, action: nil)]
   }
   
+//    показываем данные медкарты на вьюхе
   func setData() {
     if let user = conn.getAppUser() {
       if let medCard = user.medicalCard {

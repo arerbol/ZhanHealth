@@ -58,6 +58,7 @@ extension MenuPanelViewController: UITableViewDataSource {
     return 5
   }
   
+//   Левое меню
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: "cell")
     cell.textLabel?.font = UIFont(name: Font.medium.rawValue, size: 15.widthProportion())
@@ -100,6 +101,7 @@ extension MenuPanelViewController: UITableViewDelegate{
     return headerView
   }
   
+//    Открыть нужный нам контроеллер из левого меню
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     self.tableView.deselectRow(at: indexPath, animated: true)
     let navVC = UINavigationController()

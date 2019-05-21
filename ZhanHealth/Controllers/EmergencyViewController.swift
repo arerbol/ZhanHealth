@@ -38,6 +38,7 @@ class EmergencyViewController: UIViewController {
     timer?.invalidate()
   }
   
+//    получаем наше местоположение
   func getCurrentLocation() -> CLLocation? {
     if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
       CLLocationManager.authorizationStatus() ==  .authorizedAlways){
@@ -46,17 +47,19 @@ class EmergencyViewController: UIViewController {
     return nil
   }
 
-  
+//  сигнал и вибрация
   @objc func playSoundAndVibrate() {
     AudioServicesPlaySystemSound(SystemSoundID(1005))
     AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
   }
   
+//   цикл сигнала и вибрации
   func loopSoundAndVibrate(){
     timer?.invalidate()
     timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(playSoundAndVibrate), userInfo: nil, repeats: true)
   }
   
+//    нажимется сос кнопка, меняется центр и открывается
   @objc func sosTapped() {
     let centerVC = ProfileViewController()
     let centerNavVC = UINavigationController(rootViewController: centerVC)
@@ -67,6 +70,7 @@ class EmergencyViewController: UIViewController {
     panel?.openCenter(animated: true)
   }
   
+//    отправка смс в телеграм
   func sendTelegramMessage() {
     let bot = ZhanHealthBot()
     let user = conn.getAppUser()!
@@ -83,6 +87,7 @@ class EmergencyViewController: UIViewController {
     bot.sendMessage(message: message)
   }
   
+//    отправка смс на наши контакты
   func sendSMS() {
     let sms = Sms()
     let user = conn.getAppUser()!

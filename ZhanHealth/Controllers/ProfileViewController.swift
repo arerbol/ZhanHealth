@@ -60,6 +60,7 @@ class ProfileViewController: UIViewController {
     contactsView.addUserContacts(user: user!)
   }
   
+//    меняем вьюшки, при нажатии на кнопки
   @objc func toggleViews(sender: UIButton) {
     var anim: (() -> Void)?
     switch sender {
@@ -87,6 +88,7 @@ class ProfileViewController: UIViewController {
     UIView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: anim)
   }
   
+//   изменить данные, для этого меняем центральный Controller
   @objc func editProfile() {
     let centerVC = EditProfileViewController()
     let centerNavVC = UINavigationController(rootViewController: centerVC)
@@ -99,12 +101,14 @@ class ProfileViewController: UIViewController {
       self.openImageController()
   }
   
+//   добавляем наши вьюшки на главный
   fileprivate func setupViews(){
     [headerView, medCardView, instuctionsView, contactsView].forEach {
       self.view.addSubview($0)
     }
   }
   
+//    устанавливаем размеры и местоположения
   fileprivate func setupConstraints() {
     headerView.easy.layout(Top(20.heightProportion()),
                            Left(20.widthProportion()),

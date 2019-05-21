@@ -35,6 +35,7 @@ class ContactsViewController: UIViewController {
     self.hideKeyboardWhenTappedAround()
   }
   
+// Кнопка добавить, не больше 3, появляется алерт
   @objc func showAlertController() {
     if user?.contacts.count == 3 {
       self.showToast(message: "3 is maximum")
@@ -77,7 +78,7 @@ extension ContactsViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return user?.contacts.count ?? 0
   }
-  
+//  список контактов
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: UITableViewCell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
     cell.backgroundColor = .clear
@@ -101,6 +102,7 @@ extension ContactsViewController: UITableViewDataSource {
 
 extension ContactsViewController: UITableViewDelegate{
   
+//    при нажатии на номер, звонить
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     self.tableView.deselectRow(at: indexPath, animated: true)
     if let url = URL(string: "tel://\(user!.contacts[indexPath.row].phone!)"), UIApplication.shared.canOpenURL(url) {

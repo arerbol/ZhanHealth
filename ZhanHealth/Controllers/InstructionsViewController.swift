@@ -35,6 +35,7 @@ class InstructionsViewController: UIViewController {
     self.hideKeyboardWhenTappedAround()
   }
   
+//   Кнопка добавить, не больше 4, появляется алерт
   @objc func showAlertController() {
     if user?.instructions.count == 4 {
       self.showToast(message: "4 is maximum")
@@ -77,7 +78,7 @@ extension InstructionsViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return user?.instructions.count ?? 0
   }
-  
+//  показываем инструкции списком
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: UITableViewCell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
     cell.backgroundColor = .clear
